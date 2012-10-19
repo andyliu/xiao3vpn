@@ -1,0 +1,39 @@
+# <?php die(); ?>
+
+## 注意：书写时，缩进不能使用 Tab，必须使用空格
+
+#############################
+# 运行时环境
+#############################
+
+# 在 cookie 中使用什么名字保存应用程序的 session
+session_cookie_name:            vpn_manager_session
+
+# 指示 ACL 组件用什么键名在 session 中保存用户数据
+acl_session_key:                vpn_manager_userdata
+
+# 运行时信息的缓存目录
+runtime_cache_dir:              %ROOT_DIR%/tmp/runtime_cache
+
+# url 参数的传递模式，可以是标准、PATHINFO、URL 重写等模式，分别对应 standard、pathinfo、rewrite 设置值
+dispatcher_url_mode:            rewrite
+
+# 默认的时区设置
+l10n_default_timezone:          Asia/Shanghai
+
+# <?php die(); ?>
+
+# 数据表元数据缓存时间（秒）
+db_meta_lifetime:               1
+
+# 指示是否缓存数据表的元数据
+db_meta_cached:                 true
+
+# 指示用什么目录保存日志文件
+log_writer_dir:                 %ROOT_DIR%/log
+
+# 指示用什么文件名保存日志
+log_writer_filename:            devel.log
+
+# 指示记录哪些优先级的日志（不符合条件的会直接过滤,ALERT, CRIT, ERR, WARN, NOTICE, INFO, DEBUG）
+log_priorities:                 EMERG

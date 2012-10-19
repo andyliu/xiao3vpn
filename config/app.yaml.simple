@@ -1,0 +1,88 @@
+# <?php die(); ?>
+
+## 注意：书写时，缩进不能使用 Tab，必须使用空格
+# 这里的设置可以用 Q::ini('appini/设置名') 来读取，例如 Q::ini('appini/app_title');
+
+#数据库设置，database,请填写 radius 数据库，'prefix' 请不要填写。
+database:
+  driver:     mysql
+  host:       localhost
+  login:      root
+  password:   password
+  database:   radius
+  charset:    utf8
+  prefix:
+
+#管理员帐号列表
+managers:
+  1: 'admin@gmail.com'
+
+#密钥，顺便写
+secret_key: '[^=.*vpn'
+
+#库存，后期会加到产品计划里面去
+vpn_account_limit: 15
+
+#Email 设置
+email_config:
+  username: 'admin@gmail.com'
+  password: 'admin'
+  host: 'smtp.gmail.com'
+  port: 465
+  smtpauth: true
+  smtpsecure: 'ssl'
+  from_email: 'admin@gmail.com'
+  from_nick:  '网站名称'
+
+#需要邮件激活帐号 true | false
+email_activate: true
+
+#邮件通知开关 true | false
+email_notify: true
+
+
+#网站设置，域名结尾不含 / 
+meta:
+  title: '网站名称'
+  url: http://您的域名
+
+#账单计算日期长度
+cycle_invoice:
+  monthly: 30
+  quarterly: 90
+  semi-annually: 180
+  annually: 365
+
+
+#销售计划模板
+cycle_template:
+  monthly: 
+    print: '月付'
+    price: '10'
+  quarterly:
+    print: '季付'
+    price: '25'
+  semi-annually:
+    print: '半年'
+    price: '50'
+  annually:
+    print: '年付'
+    price: '100'
+
+#支付宝接口路径，相对于系统根目录
+alipay_dir: '/payment/alipay/'
+
+#支付接口设置
+payment:
+  alipay:
+    partner: 您的ID
+    key: '密钥'
+    seller_email: 'admin@gmail.com'
+    return_url: 'http://您的域名/payment/verify'
+    notify_url: 'http://您的域名/payment/notify'
+    sign_type: 'MD5'
+    input_charset: 'utf-8'
+    transport: 'http'
+
+#统计代码
+analytics: ''

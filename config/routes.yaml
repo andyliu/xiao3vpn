@@ -1,0 +1,77 @@
+# <?php die(); ?>
+
+## 注意：书写时，缩进不能使用 Tab，必须使用空格
+
+_manage_:
+  pattern: "/manage"
+  defaults:
+    module: manage
+    controller: default
+    action: index
+
+_staticPage_:
+  regex: "/([a-z-]+).html"
+  config:
+    slug: 1
+  defaults:
+    module: default
+    controller: cms
+    action: page
+
+_service_:
+  pattern: "/service/:action/*"
+  defaults:
+    module: default
+    controller: service
+    action: index
+
+_resetpwd_:
+  pattern: "/resetpwd"
+  defaults:
+    module: default
+    controller: default
+    action: resetpwd
+
+_activate_:
+  pattern: "/activate"
+  defaults:
+    module: default
+    controller: default
+    action: activate
+
+_signin_:
+  pattern: "/signin"
+  defaults:
+    module: default
+    controller: default
+    action: signin
+
+_signup_:
+  pattern: "/signup"
+  defaults:
+    module: default
+    controller: default
+    action: signup
+
+_payment_:
+  pattern: "/payment/:action/*"
+  defaults:
+    module: default
+    controller: payment
+    action: index
+
+_account_:
+  pattern: "/account/:action/*"
+  defaults:
+    module: default
+    controller: account
+    action: index
+
+
+_default_:
+  pattern: /:module/:controller/:action/*
+  defaults:
+    module: default
+    controller: default
+    action: index
+
